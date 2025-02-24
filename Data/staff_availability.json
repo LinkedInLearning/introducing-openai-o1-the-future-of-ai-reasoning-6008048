@@ -1,0 +1,60 @@
+{
+  "staffAvailability": [
+    {
+      "name": "Alice",
+      "week1": { "Monday": "8-2", "Tuesday": "Off", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" },
+      "week2": { "Monday": "8-2", "Tuesday": "Off", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" },
+      "week3": { "Monday": "8-2", "Tuesday": "Off", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" },
+      "week4": { "Monday": "8-2", "Tuesday": "Off", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" }
+    },
+    {
+      "name": "Bob",
+      "week1": { "Monday": "Off", "Tuesday": "2-8", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "Off" },
+      "week2": { "Monday": "Off", "Tuesday": "2-8", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "Off" },
+      "week3": { "Monday": "Off", "Tuesday": "2-8", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "Off" },
+      "week4": { "Monday": "Off", "Tuesday": "2-8", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "Off" }
+    },
+    {
+      "name": "Carol",
+      "week1": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "Off", "Saturday": "8-2", "Sunday": "8-2" },
+      "week2": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "Off", "Saturday": "8-2", "Sunday": "8-2" },
+      "week3": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "Off", "Saturday": "8-2", "Sunday": "8-2" },
+      "week4": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "Off", "Saturday": "8-2", "Sunday": "8-2" }
+    },
+    {
+      "name": "Dave",
+      "week1": { "Monday": "10-4", "Tuesday": "10-4", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "Off", "Saturday": "Off", "Sunday": "10-4" },
+      "week2": { "Monday": "10-4", "Tuesday": "10-4", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "Off", "Saturday": "Off", "Sunday": "10-4" },
+      "week3": { "Monday": "10-4", "Tuesday": "10-4", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "Off", "Saturday": "Off", "Sunday": "10-4" },
+      "week4": { "Monday": "10-4", "Tuesday": "10-4", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "Off", "Saturday": "Off", "Sunday": "10-4" }
+    },
+    {
+      "name": "Eric",
+      "week1": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "Off", "Friday": "8-2", "Saturday": "Off", "Sunday": "8-2" },
+      "week2": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "Off", "Friday": "8-2", "Saturday": "Off", "Sunday": "8-2" },
+      "week3": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "Off", "Friday": "8-2", "Saturday": "Off", "Sunday": "8-2" },
+      "week4": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "Off", "Friday": "8-2", "Saturday": "Off", "Sunday": "8-2" }
+    },
+    {
+      "name": "Fiona",
+      "week1": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "2-8" },
+      "week2": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "2-8" },
+      "week3": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "2-8" },
+      "week4": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "2-8", "Thursday": "2-8", "Friday": "2-8", "Saturday": "2-8", "Sunday": "2-8" }
+    },
+    {
+      "name": "George",
+      "week1": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" },
+      "week2": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" },
+      "week3": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" },
+      "week4": { "Monday": "8-2", "Tuesday": "8-2", "Wednesday": "8-2", "Thursday": "8-2", "Friday": "8-2", "Saturday": "Off", "Sunday": "Off" }
+    },
+    {
+      "name": "Hannah",
+      "week1": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "10-4", "Saturday": "Off", "Sunday": "10-4" },
+      "week2": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "10-4", "Saturday": "Off", "Sunday": "10-4" },
+      "week3": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "10-4", "Saturday": "Off", "Sunday": "10-4" },
+      "week4": { "Monday": "Off", "Tuesday": "Off", "Wednesday": "10-4", "Thursday": "10-4", "Friday": "10-4", "Saturday": "Off", "Sunday": "10-4" }
+    }
+  ]
+}

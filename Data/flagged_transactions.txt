@@ -1,0 +1,536 @@
+1. Customer C001 (Adams)
+   Rationale:
+   - Flagged Transactions: Yes
+   - Fraud Risk Score: 90 (High)
+   - Account Age: 0.8 years (Newish Account)
+   - Suspicious Device Activity:
+     - Registered Devices: 2
+     - New Devices Used Last 24h: 4
+   - Transaction Locations:
+     - Locations Used: 3 Cities
+     - Unusual Locations: Yes
+   - AML/KYC Flags: Yes
+   - Negative Social Media Mentions: 2
+   - Customer Call Transcript Insights:
+     - Provided inconsistent personal details
+   - Recent Purchases: Multiple SIM Cards, High-End Electronics
+  
+
+2. Customer C002 (Baker)
+   Rationale:
+   - Flagged Transactions: Yes
+   - Fraud Risk Score: 95 (Very High)
+   - Account Age: 0.5 years (New Account)
+   - Suspicious Device Activity:
+     - Registered Devices: 1
+     - New Devices Used Last 24h: 5
+   - Transaction Locations:
+     - Locations Used: Multiple Cities
+     - Unusual Locations: Yes
+   - AML/KYC Flags: Yes
+   - Negative Social Media Mentions: 1
+   - Customer Call Transcript Insights:
+     - Failed security questions
+   - Recent Purchases: Old Phone, SIM Card – Brand A
+   
+3. Customer C003 (Chang)
+   Rationale:
+   - Flagged Transactions: No
+   - Fraud Risk Score: 22 (Low)
+   - Account Age: 3.0 years (Established)
+   - Suspicious Device Activity:
+     - Registered Devices: 2
+     - New Devices Last 24h: 0
+   - Transaction Locations:
+     - Locations Used: Single City
+     - Unusual Locations: No
+   - AML/KYC Flags: No
+   - Negative Social Media Mentions: 0
+   - Customer Call Transcript Insights:
+     - Provided full correct info
+   - Recent Purchases: Groceries
+   
+
+4. Customer C004 (Davis)
+   Rationale:
+   - Flagged Transactions: Yes
+   - Fraud Risk Score: 65 (Medium)
+   - Account Age: 1.2 years
+   - Suspicious Device Activity:
+     - Registered Devices: 3
+     - New Devices Last 24h: 1
+   - Transaction Locations:
+     - Locations Used: 2 Cities
+     - Unusual Locations: No
+   - AML/KYC Flags: Yes
+   - Negative Social Media Mentions: 0
+   - Customer Call Transcript Insights:
+     - Called to dispute charges
+   - Recent Purchases: Airline Tickets
+  
+
+5. Customer C005 (Evans)
+   Rationale:
+   - Flagged Transactions: No
+   - Fraud Risk Score: 30 (Low)
+   - Account Age: 4.0 years
+   - Suspicious Device Activity:
+     - Registered Devices: 2
+     - New Devices Last 24h: 0
+   - Transaction Locations:
+     - Locations Used: Single City
+     - Unusual Locations: No
+   - AML/KYC Flags: No
+   - Negative Social Media Mentions: 1
+   - Customer Call Transcript Insights:
+     - Simple query about billing
+   - Recent Purchases: Sporting Goods
+ 
+
+6. Customer C006 (Franklin)
+   Rationale:
+   - Flagged Transactions: Yes
+   - Fraud Risk Score: 88 (High)
+   - Account Age: 0.7 years
+   - Suspicious Device Activity:
+     - Registered Devices: 1
+     - New Devices Last 24h: 3
+   - Transaction Locations:
+     - Locations Used: 4 Cities
+     - Unusual Locations: Yes
+   - AML/KYC Flags: No
+   - Negative Social Media Mentions: 2
+   - Customer Call Transcript Insights:
+     - Attempted to bypass verification
+   - Recent Purchases: Multiple Gift Cards
+
+7. Customer C007 (Garcia)
+   Rationale:
+   - Flagged Transactions: Yes
+   - Fraud Risk Score: 58 (Medium)
+   - Account Age: 2.5 years
+   - Suspicious Device Activity:
+     - Registered Devices: 2
+     - New Devices Last 24h: 1
+   - Transaction Locations:
+     - Locations Used: 2 Cities
+     - Unusual Locations: No
+   - AML/KYC Flags: Yes
+   - Negative Social Media Mentions: 0
+   - Customer Call Transcript Insights:
+     - Claimed stolen identity
+   - Recent Purchases: Jewelry
+  
+
+8. Customer C008 (Harris)
+   Rationale:
+   - Flagged Transactions: No
+   - Fraud Risk Score: 40 (Low)
+   - Account Age: 5.0 years
+   - Suspicious Device Activity:
+     - Registered Devices: 3
+     - New Devices Last 24h: 0
+   - Transaction Locations:
+     - Locations Used: Single City
+     - Unusual Locations: No
+   - AML/KYC Flags: No
+   - Negative Social Media Mentions: 0
+   - Customer Call Transcript Insights:
+     - Straightforward verification
+   - Recent Purchases: Pharmacy Items
+
+
+9. Customer C009 (Ingram)
+   Rationale:
+   - Flagged Transactions: Yes
+   - Fraud Risk Score: 72 (Medium)
+   - Account Age: 1.1 years
+   - Suspicious Device Activity:
+     - Registered Devices: 1
+     - New Devices Last 24h: 2
+   - Transaction Locations:
+     - Locations Used: 3 Cities
+     - Unusual Locations: Yes
+   - AML/KYC Flags: Yes
+   - Negative Social Media Mentions: 1
+   - Customer Call Transcript Insights:
+     - Conflicting statements about recent travel
+   - Recent Purchases: Electronics Return
+  
+
+10. Customer C010 (Jacobs)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 28 (Low)
+    - Account Age: 6.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: Single City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - All details verified
+    - Recent Purchases: Books
+   
+
+11. Customer C011 (Keller)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 90 (High)
+    - Account Age: 0.4 years
+    - Suspicious Device Activity:
+      - Registered Devices: 1
+      - New Devices Last 24h: 4
+    - Transaction Locations:
+      - Locations Used: Multiple Countries
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 3
+    - Customer Call Transcript Insights:
+      - Caller refused standard security steps
+    - Recent Purchases: High-End Watches
+  
+
+12. Customer C012 (Lopez)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 35 (Low)
+    - Account Age: 2.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 3
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: 1 City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - No suspicious behavior
+    - Recent Purchases: Groceries, Household Items
+    -
+
+13. Customer C013 (Miller)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 53 (Medium)
+    - Account Age: 0.9 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 1
+    - Transaction Locations:
+      - Locations Used: 2 Cities
+      - Unusual Locations: No
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 1
+    - Customer Call Transcript Insights:
+      - Customer uncertain about last purchase
+    - Recent Purchases: Car Parts
+  
+
+14. Customer C014 (Norton)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 20 (Low)
+    - Account Age: 3.5 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: Single City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - Verified identity thoroughly
+    - Recent Purchases: Clothing
+ 
+
+15. Customer C015 (Owens)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 75 (High)
+    - Account Age: 1.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 1
+      - New Devices Last 24h: 2
+    - Transaction Locations:
+      - Locations Used: 2 Cities
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 1
+    - Customer Call Transcript Insights:
+      - Unsure about account details
+    - Recent Purchases: Foreign Currency
+ 
+
+16. Customer C016 (Patel)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 45 (Low)
+    - Account Age: 2.2 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: Single City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - Clear explanation for recent activity
+    - Recent Purchases: Pet Supplies
+
+
+17. Customer C017 (Quinn)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 82 (High)
+    - Account Age: 0.6 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 2
+    - Transaction Locations:
+      - Locations Used: 3 Cities
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 2
+    - Customer Call Transcript Insights:
+      - Evasive about purchase details
+    - Recent Purchases: Cryptocurrency
+
+
+18. Customer C018 (Rodriguez)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 50 (Medium)
+    - Account Age: 4.5 years
+    - Suspicious Device Activity:
+      - Registered Devices: 3
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: 2 Cities
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 1
+    - Customer Call Transcript Insights:
+      - Recollection of normal purchases
+    - Recent Purchases: Home Appliances
+
+
+19. Customer C019 (Sanchez)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 60 (Medium)
+    - Account Age: 1.5 years
+    - Suspicious Device Activity:
+      - Registered Devices: 1
+      - New Devices Last 24h: 1
+    - Transaction Locations:
+      - Locations Used: 2 Cities
+      - Unusual Locations: No
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - Confusion about transaction history
+    - Recent Purchases: Mobile Accessories
+  
+
+20. Customer C020 (Taylor)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 92 (High)
+    - Account Age: 0.3 years
+    - Suspicious Device Activity:
+      - Registered Devices: 1
+      - New Devices Last 24h: 4
+    - Transaction Locations:
+      - Locations Used: Many Countries
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 2
+    - Customer Call Transcript Insights:
+      - Attempted to mask location info
+    - Recent Purchases: Plane Tickets, Luxury Hotel
+ 
+
+21. Customer C021 (Ueda)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 15 (Low)
+    - Account Age: 5.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: Single City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - Verified all details correctly
+    - Recent Purchases: Groceries, Utility Bill
+ 
+22. Customer C022 (Vargas)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 70 (Medium)
+    - Account Age: 1.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 1
+    - Transaction Locations:
+      - Locations Used: 2 Cities
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 1
+    - Customer Call Transcript Insights:
+      - Vague about transaction purpose
+    - Recent Purchases: Bulk Gift Cards
+
+
+23. Customer C023 (Walsh)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 38 (Low)
+    - Account Age: 2.5 years
+    - Suspicious Device Activity:
+      - Registered Devices: 3
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: Single City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - Polite, standard inquiry
+    - Recent Purchases: Clothing Returns
+ 
+
+24. Customer C024 (Xie)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 77 (High)
+    - Account Age: 0.8 years
+    - Suspicious Device Activity:
+      - Registered Devices: 1
+      - New Devices Last 24h: 2
+    - Transaction Locations:
+      - Locations Used: 3 Cities
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 2
+    - Customer Call Transcript Insights:
+      - Provided partial info
+    - Recent Purchases: Luxury Shoes
+  
+
+25. Customer C025 (Young)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 42 (Low)
+    - Account Age: 6.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 3
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: 1 City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - Straightforward verification
+    - Recent Purchases: Movie Tickets
+
+
+26. Customer C026 (Zhang)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 85 (High)
+    - Account Age: 0.9 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 3
+    - Transaction Locations:
+      - Locations Used: Multiple Cities
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 1
+    - Customer Call Transcript Insights:
+      - Contradictory statements
+    - Recent Purchases: Electronics, Crypto
+   
+
+27. Customer C027 (Abbott)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 55 (Medium)
+    - Account Age: 3.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 2
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: Single City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - Detailed knowledge of purchases
+    - Recent Purchases: Furniture
+  
+
+28. Customer C028 (Braun)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 68 (Medium)
+    - Account Age: 1.1 years
+    - Suspicious Device Activity:
+      - Registered Devices: 1
+      - New Devices Last 24h: 2
+    - Transaction Locations:
+      - Locations Used: 2 Cities
+      - Unusual Locations: No
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 1
+    - Customer Call Transcript Insights:
+      - Claimed identity theft
+    - Recent Purchases: Designer Bag
+
+
+29. Customer C029 (Chan)
+    Rationale:
+    - Flagged Transactions: Yes
+    - Fraud Risk Score: 93 (Very High)
+    - Account Age: 0.2 years
+    - Suspicious Device Activity:
+      - Registered Devices: 1
+      - New Devices Last 24h: 5
+    - Transaction Locations:
+      - Locations Used: 4 Cities
+      - Unusual Locations: Yes
+    - AML/KYC Flags: Yes
+    - Negative Social Media Mentions: 2
+    - Customer Call Transcript Insights:
+      - Disconnected call mid-verification
+    - Recent Purchases: High-Value Electronics
+  
+
+30. Customer C030 (Diaz)
+    Rationale:
+    - Flagged Transactions: No
+    - Fraud Risk Score: 48 (Low)
+    - Account Age: 7.0 years
+    - Suspicious Device Activity:
+      - Registered Devices: 3
+      - New Devices Last 24h: 0
+    - Transaction Locations:
+      - Locations Used: Single City
+      - Unusual Locations: No
+    - AML/KYC Flags: No
+    - Negative Social Media Mentions: 0
+    - Customer Call Transcript Insights:
+      - All security checks passed
+    - Recent Purchases: Household Goods
+
