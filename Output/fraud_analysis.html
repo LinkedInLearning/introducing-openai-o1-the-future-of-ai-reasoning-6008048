@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fraud Analysis Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .risk-section {
+            margin-bottom: 30px;
+        }
+        .false-positive-table, .false-positive-table th, .false-positive-table td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        .false-positive-table th, .false-positive-table td {
+            padding: 8px;
+            text-align: left;
+        }
+        .report {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 15px;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Fraud Analysis Report</h1>
+
+<!-- 1. Identify Medium and High-Risk Cases -->
+<div class="risk-section">
+    <h2>1. Medium and High-Risk Cases</h2>
+    <h3>High-Risk (Fraud Risk Score ≥ 75)</h3>
+    <ul>
+        <li><strong>C001 (Adams)</strong> – Score: 90, Recent Purchases: Multiple SIM Cards, High-End Electronics</li>
+        <li><strong>C002 (Baker)</strong> – Score: 95, Recent Purchases: Old Phone, SIM Card – Brand A</li>
+        <li><strong>C006 (Franklin)</strong> – Score: 88, Recent Purchases: Multiple Gift Cards</li>
+        <li><strong>C011 (Keller)</strong> – Score: 90, Recent Purchases: High-End Watches</li>
+        <li><strong>C015 (Owens)</strong> – Score: 75, Recent Purchases: Foreign Currency</li>
+        <li><strong>C017 (Quinn)</strong> – Score: 82, Recent Purchases: Cryptocurrency</li>
+        <li><strong>C020 (Taylor)</strong> – Score: 92, Recent Purchases: Plane Tickets, Luxury Hotel</li>
+        <li><strong>C024 (Xie)</strong> – Score: 77, Recent Purchases: Luxury Shoes</li>
+        <li><strong>C026 (Zhang)</strong> – Score: 85, Recent Purchases: Electronics, Crypto</li>
+        <li><strong>C029 (Chan)</strong> – Score: 93, Recent Purchases: High-Value Electronics</li>
+    </ul>
+
+    <h3>Medium-Risk (Fraud Risk Score 50–74)</h3>
+    <ul>
+        <li><strong>C004 (Davis)</strong> – Score: 65, Recent Purchases: Airline Tickets</li>
+        <li><strong>C007 (Garcia)</strong> – Score: 58, Recent Purchases: Jewelry</li>
+        <li><strong>C009 (Ingram)</strong> – Score: 72, Recent Purchases: Electronics Return</li>
+        <li><strong>C013 (Miller)</strong> – Score: 53, Recent Purchases: Car Parts</li>
+        <li><strong>C019 (Sanchez)</strong> – Score: 60, Recent Purchases: Mobile Accessories</li>
+        <li><strong>C022 (Vargas)</strong> – Score: 70, Recent Purchases: Bulk Gift Cards</li>
+        <li><strong>C028 (Braun)</strong> – Score: 68, Recent Purchases: Designer Bag</li>
+    </ul>
+</div>
+
+<!-- 2. Analysis of Unstructured Transcripts for Each Medium and High-Risk Case -->
+<div class="risk-section">
+    <h2>2. Analysis of Unstructured Transcripts</h2>
+
+    <h3>High-Risk Cases</h3>
+    <ul>
+        <li>
+            <strong>C001 (Adams):</strong> Email about a duplicate $499.99 charge. Customer claims they only made one purchase. No direct contradictions; requests investigation.
+        </li>
+        <li>
+            <strong>C002 (Baker):</strong> Call where the caller refused to provide SSN, demanded reversal of unauthorized charges. Heightened suspicion due to refusal of ID checks.
+        </li>
+        <li>
+            <strong>C006 (Franklin):</strong> Call transcript shows caller tried skipping identity checks, requested urgent refund of $200 without proof. Indicates possible fraud.
+        </li>
+        <li>
+            <strong>C011 (Keller):</strong> Call with aggressive refusal to answer security questions, threatened legal action if $1,000+ charges not reversed. Remains suspicious.
+        </li>
+        <li>
+            <strong>C015 (Owens):</strong> SMS about a $500 foreign currency transaction. Asking to confirm legitimacy. No contradictory statements, but still a high-risk trigger.
+        </li>
+        <li>
+            <strong>C017 (Quinn):</strong> Call with uncertain details about a $900 cryptocurrency purchase; caller gave contradictory info on location/date. Suggests heightened risk.
+        </li>
+        <li>
+            <strong>C020 (Taylor):</strong> Email from overseas location acknowledging $600 hotel and flight charges. Claims they are legitimate, but flagged as high risk due to travel.
+        </li>
+        <li>
+            <strong>C024 (Xie):</strong> Email stating $450 luxury shoe purchase is valid (for work travel). Remains high risk given purchase profile; no proof or contradiction provided.
+        </li>
+        <li>
+            <strong>C026 (Zhang):</strong> SMS about a $750 laptop purchase flagged due to new shipping address. Customer insists it is legitimate but remains under high-risk scrutiny.
+        </li>
+        <li>
+            <strong>C029 (Chan):</strong> Chat ended abruptly after customer refused to verify $1,500 electronics purchase. Location mismatch. Strongly suspicious behavior.
+        </li>
+    </ul>
+
+    <h3>Medium-Risk Cases</h3>
+    <ul>
+        <li>
+            <strong>C004 (Davis):</strong> Call about a $350 airfare dispute. Customer later admitted it was legitimate for an upcoming trip, suggesting initial dispute was confusion.
+        </li>
+        <li>
+            <strong>C007 (Garcia):</strong> Email alleging ID theft for a $2,000 jewelry purchase in another state. Denies authorizing the transaction; no contradictory info found.
+        </li>
+        <li>
+            <strong>C009 (Ingram):</strong> Chat denying travel out of state for a transaction in Florida. Customer denies any such trip. Could be fraudulent or mistaken identity.
+        </li>
+        <li>
+            <strong>C013 (Miller):</strong> Call uncertain about a $120 car part brand. The customer recalls ordering “something” but details are fuzzy. Moderate suspicion remains.
+        </li>
+        <li>
+            <strong>C019 (Sanchez):</strong> Call where customer is confused about $50 accessory charges. Possibly a family member used the card. Unclear but still flagged medium risk.
+        </li>
+        <li>
+            <strong>C022 (Vargas):</strong> Email inquiring about purchasing ten $100 gift cards in one transaction. Unusual bulk purchase. Remains under medium-risk investigation.
+        </li>
+        <li>
+            <strong>C028 (Braun):</strong> Call initially claimed identity theft on a $400 purchase, then changed the story saying a friend borrowed the card. Contradictory explanation.
+        </li>
+    </ul>
+</div>
+
+<!-- 3. & 4. Detecting False Positives and Table -->
+<div class="risk-section">
+    <h2>3. False Positives Analysis</h2>
+    <p>
+        After examining transcripts for contradictions or legitimate explanations, only one case appears to be a clear false positive:
+    </p>
+
+    <table class="false-positive-table">
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Reason Flagged as Suspicious</th>
+                <th>Reason for False Positive</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C004 (Davis)</td>
+                <td>$350 airfare charge dispute; transaction triggered a medium-risk alert.</td>
+                <td>Customer later admitted to booking the flight for next month. The confusion over posting date caused the initial dispute, which turned out to be a legitimate purchase.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 5. Plain-Text Summary -->
+<div class="report">
+    <h3>Plain-Text Summary of Findings</h3>
+    <p>
+        After reviewing the transactions and associated transcripts, the following observations were made:
+    </p>
+    <p>
+        • High-risk customers generally showed patterns such as refusing standard security checks, insisting on immediate refunds without proof, or showing contradictory travel or purchase details.  
+        • Medium-risk customers raised concerns due to unusual purchases, partial recall of transactions, or purchases typical of fraud patterns (e.g., bulk gift cards).  
+        • One notable false positive was Customer C004, who initially disputed airfare charges but later acknowledged the purchase. This confusion was misinterpreted as fraud.  
+        • No other medium or high-risk cases showed clear contradictions or final notes indicating a legitimate explanation for the flagged risk.  
+        • Thus, only one clear false positive (C004) was identified. All other cases remain under suspicion or require further investigation.
+    </p>
+</div>
+
+</body>
+</html>
