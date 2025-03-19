@@ -1,0 +1,94 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection Report</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .high-risk {
+            background-color: #ffcccc;
+        }
+        .medium-risk {
+            background-color: #ffffcc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fraud Analysis Report</h1>
+    <h2>Medium and High-Risk Transactions Analysis</h2>
+
+    <h3>False Positives Detected</h3>
+    <table>
+        <tr>
+            <th>Case ID</th>
+            <th>Risk Level</th>
+            <th>Reason Flagged</th>
+            <th>Reason Determined as False Positive</th>
+        </tr>
+        <tr>
+            <td>C001</td>
+            <td class="high-risk">High</td>
+            <td>Duplicate high-value charges flagged ($499.99 x2).</td>
+            <td>Transcript shows customer only made one payment and flagged the issue proactively.</td>
+        </tr>
+        <tr>
+            <td>C004</td>
+            <td class="medium-risk">Medium</td>
+            <td>Disputed $350 airfare purchase.</td>
+            <td>Transcript confirms the customer acknowledged making the purchase after clarification.</td>
+        </tr>
+        <tr>
+            <td>C020</td>
+            <td class="high-risk">High</td>
+            <td>Unusually large international travel expenses ($600).</td>
+            <td>Customer confirmed legitimacy of charges and requested no card block.</td>
+        </tr>
+        <tr>
+            <td>C024</td>
+            <td class="high-risk">High</td>
+            <td>Luxury shoes purchase raised red flags.</td>
+            <td>Email transcript indicates the purchase was business-related and legitimate.</td>
+        </tr>
+        <tr>
+            <td>C028</td>
+            <td class="medium-risk">Medium</td>
+            <td>Identity theft claimed for a $400 designer bag purchase.</td>
+            <td>Caller later admitted a friend used the card with permission.</td>
+        </tr>
+    </table>
+
+    <h3>Summary</h3>
+    <p>
+        A review of the provided data revealed several medium and high-risk transactions flagged for their potential to indicate fraudulent activity. 
+        Using the unstructured data, some cases were found to be legitimate through customer correspondence and behavior analysis. 
+        These identified false positives are summarized in the table above.
+    </p>
+    <p>
+        Notably:
+        <ul>
+            <li>Customer C001 was flagged due to duplicate charges, but their email provides sufficient evidence of legitimate action.</li>
+            <li>Customer C004 initially disputed a charge but later admitted to making the purchase.</li>
+            <li>Customer C020 confirmed the legitimacy of their international travel expenses via email.</li>
+            <li>Customer C024 justified a luxury purchase as work-related in their email.</li>
+            <li>Customer C028 initially claimed identity theft but later admitted the card was used with permission by a friend.</li>
+        </ul>
+    </p>
+    <p>
+        These findings emphasize the importance of cross-referencing structured data with unstructured communications to accurately differentiate fraudulent activity from genuine transactions.
+    </p>
+</body>
+</html>
+```

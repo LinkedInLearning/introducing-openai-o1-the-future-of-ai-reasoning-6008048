@@ -1,0 +1,363 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Four‑Week Shift Schedule Report</title>
+    <style>
+      body { font-family: Arial, sans-serif; line-height: 1.5; }
+      h1, h2, h3 { color: #333; }
+      table { border-collapse: collapse; margin-bottom: 20px; }
+      table, th, td { border: 1px solid #666; padding: 6px 8px; }
+      th { background-color: #ddd; }
+      .note { font-style: italic; color: #800; }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Shift Scheduling Report</h1>
+
+    <h2>1. Extracted Employee Details</h2>
+    <ul>
+      <li>
+        <strong>Alice</strong>
+        <ul>
+          <li>Structured Availability: Works Monday, Wednesday, Thursday, and Friday mornings (8am–2pm) in all four weeks. Off on Tuesday and weekends.</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>Prefers early (morning) shifts.</li>
+              <li>Cannot work on Tuesdays and weekends because of family commitments.</li>
+              <li>Needs to leave by 2 p.m. for childcare.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Bob</strong>
+        <ul>
+          <li>Structured Availability: Works Tuesday through Saturday afternoons (2pm–8pm) in all four weeks. Off on Monday and Sunday.</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>Enjoys later (afternoon) shifts.</li>
+              <li>Avoids Monday and Sunday (due to personal errands).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Carol</strong>
+        <ul>
+          <li>Structured Availability: In week1–week4, she is available Wednesday and Thursday afternoons (2pm–8pm) and Saturday and Sunday mornings (8am–2pm); off on other days.</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>Has classes early in the week.</li>
+              <li>Works only Wednesday–Thursday afternoons and Saturday–Sunday mornings.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Dave</strong>
+        <ul>
+          <li>Structured Availability: In all weeks, available Monday–Thursday and Sunday from 10am–4pm (Friday and Saturday off).</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>Has a late start on Monday (class in the morning) so his available window is later than standard morning.</li>
+              <li>Free Tuesday to Thursday.</li>
+              <li>Prefers working on Sunday and takes Friday off.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Eric</strong>
+        <ul>
+          <li>Structured Availability: In all weeks, works Monday, Tuesday, Wednesday, Friday, and Sunday mornings (8am–2pm); off Thursday and Saturday.</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>Likes consistent morning shifts (on Monday, Tuesday, Wednesday, and Friday).</li>
+              <li>Keeps Thursday and Saturday mostly free.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Fiona</strong>
+        <ul>
+          <li>Structured Availability: In all weeks, available from Wednesday through Sunday on the afternoon shift (2pm–8pm); off Monday and Tuesday.</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>Runs errands on Monday–Tuesday, so she starts on Wednesdays.</li>
+              <li>Prefers afternoon shifts.</li>
+              <li>Works evenings through Sunday.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>George</strong>
+        <ul>
+          <li>Structured Availability: In all weeks, works Monday through Friday mornings (8am–2pm); Off on Saturday and Sunday.</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>An early riser who prefers morning work.</li>
+              <li>Does not work on weekends because of community commitments.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Hannah</strong>
+        <ul>
+          <li>Structured Availability: In all weeks, available Wednesday, Thursday, Friday, and Sunday from 10am–4pm; off on Monday, Tuesday, and Saturday.</li>
+          <li>Preferences/Constraints:
+            <ul>
+              <li>Often travels early in the week.</li>
+              <li>Available Wednesday–Friday and Sunday for mid‑morning to early afternoon.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>2. Identified Scheduling Constraints</h2>
+    <ul>
+      <li>Only employees whose available slot exactly covers a shift may be assigned that shift. The required shifts are:
+        <ul>
+          <li>Morning: 8am–2pm</li>
+          <li>Afternoon: 2pm–8pm</li>
+        </ul>
+      </li>
+      <li>
+        Employees with availability matching “8‑2” (Alice, Eric, George, and Carol on weekends) are ideal for morning shifts.
+      </li>
+      <li>
+        Employees with availability matching “2‑8” (Bob, Carol on Wed–Thu, Fiona) are ideal for afternoon shifts.
+      </li>
+      <li>
+        Bob must not be scheduled on Monday or Sunday.
+      </li>
+      <li>
+        Alice cannot work on Tuesday or weekends.
+      </li>
+      <li>
+        Carol works only Wednesday–Thursday afternoons and Saturday–Sunday mornings.
+      </li>
+      <li>
+        Dave’s available window (10am–4pm) does not fully cover either the standard morning or afternoon shift. However, to ensure every shift is staffed, a single exception is proposed for Monday afternoon.
+      </li>
+      <li>
+        Eric is available only for morning shifts.
+      </li>
+      <li>
+        Fiona is available only for afternoon shifts.
+      </li>
+      <li>
+        George is available only for morning shifts (Monday–Friday).
+      </li>
+      <li>
+        Hannah’s availability (10am–4pm) also does not exactly match the required shifts; she will remain unscheduled.
+      </li>
+    </ul>
+    <p class="note">
+      Note: The Monday afternoon shift has a gap because no employee with a standard “2‑8” availability is available that day. To meet the requirement that every shift is covered, an exception is proposed – assigning Dave to work Monday afternoon despite his usual window being 10am–4pm. This special assignment is noted and will require Dave’s agreement.
+    </p>
+
+    <h2>3. Proposed Four‑Week Schedule</h2>
+    <p>The following schedule assigns two employees per day – one for the morning shift (8am–2pm) and one for the afternoon shift (2pm–8pm) – while respecting the employees’ structured availability and personal preferences. (Except for the Monday afternoon exception described above.)</p>
+
+    <h3>Week 1</h3>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Morning Shift (8am–2pm)</th>
+        <th>Afternoon Shift (2pm–8pm)</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Alice</td>
+        <td>Dave <span class="note">(Exception: Assigned despite 10‑4 availability)</span></td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>George</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Eric</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Alice</td>
+        <td>Carol</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>George</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+    </table>
+
+    <h3>Week 2</h3>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Morning Shift (8am–2pm)</th>
+        <th>Afternoon Shift (2pm–8pm)</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Eric</td>
+        <td>Dave <span class="note">(Exception)</span></td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>George</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Alice</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>George</td>
+        <td>Carol</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Eric</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+    </table>
+
+    <h3>Week 3</h3>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Morning Shift (8am–2pm)</th>
+        <th>Afternoon Shift (2pm–8pm)</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>George</td>
+        <td>Dave <span class="note">(Exception)</span></td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Eric</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Alice</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Alice</td>
+        <td>Carol</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>George</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+    </table>
+
+    <h3>Week 4</h3>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Morning Shift (8am–2pm)</th>
+        <th>Afternoon Shift (2pm–8pm)</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Alice</td>
+        <td>Dave <span class="note">(Exception)</span></td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Eric</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>George</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Alice</td>
+        <td>Carol</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Eric</td>
+        <td>Bob</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Carol</td>
+        <td>Fiona</td>
+      </tr>
+    </table>
+
+    <h2>4. Summary</h2>
+    <p>
+      In this proposed schedule:
+    </p>
+    <ul>
+      <li>Each day is covered by a morning shift (8am–2pm) and an afternoon shift (2pm–8pm).</li>
+      <li>The scheduling respects employee availability and individual preferences as provided.</li>
+      <li>Employees with “8‑2” availability (Alice, Eric, George, and Carol on weekends) are used exclusively for morning shifts.</li>
+      <li>Employees with “2‑8” availability (Bob, Carol on Wed–Thu, and Fiona) cover the afternoon slots.</li>
+      <li>The Monday afternoon slot (2pm–8pm) lacks a perfect match; therefore, an exception is made by assigning Dave (whose usual window is 10am–4pm) on Monday afternoons. Staff agreement for this exception is assumed.</li>
+      <li>Due to the discrepancy between their structured times and required shift times, Dave and Hannah (both 10‑4 available) are generally not assigned except for the necessary Monday exception.</li>
+    </ul>
+    <p>
+      This schedule is repeated with slight rotations on the morning side to distribute assignments among Alice, Eric, and George while keeping everyone’s day‐off and preference constraints in mind.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      The schedule meets the requirement of having one employee on each shift every day, fully respecting employee availability and preferences where possible. The only noted conflict is the Monday afternoon shift, which is addressed by a one‐time adjustment. Further discussion with Dave may be needed to confirm this adjustment.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SVG Space Invaders</title>
+  <style>
+    html, body {
+      margin: 0; 
+      padding: 0;
+      background: #000; 
+      overflow: hidden;
+    }
+    #gameArea {
+      display: block;
+      margin: 0 auto;
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+<!-- The main SVG area for the game. All graphics are defined and used here -->
+<svg id="gameArea" width="600" height="400">
+  <defs>
+    <!-- Define an alien that looks like a small pixelated bug. We'll scale it up in code. -->
+    <g id="alien" transform="scale(2)">
+      <!-- A simple 4x3 pattern that might look like a bug -->
+      <rect x="1" y="0" width="2" height="1" fill="#0f0"/>
+      <rect x="0" y="1" width="4" height="1" fill="#0f0"/>
+      <rect x="1" y="2" width="2" height="1" fill="#0f0"/>
+    </g>
+
+    <!-- Define a spaceship shape with a small pixel pattern -->
+    <g id="ship" transform="scale(2)">
+      <rect x="1" y="0" width="2" height="1" fill="#0ff"/>
+      <rect x="0" y="1" width="4" height="1" fill="#0ff"/>
+      <rect x="1" y="2" width="2" height="1" fill="#0ff"/>
+      <rect x="0" y="3" width="4" height="1" fill="#0ff"/>
+    </g>
+
+    <!-- Define a bullet shape, just a small rectangle -->
+    <g id="bullet">
+      <rect x="0" y="0" width="2" height="6" fill="red" />
+    </g>
+  </defs>
+</svg>
+
+<script>
+(function(){
+  const svg = document.getElementById('gameArea');
+  const width = 600;
+  const height = 400;
+  
+  // Track keyboard state
+  let leftPressed = false;
+  let rightPressed = false;
+  let spacePressed = false;
+
+  // Game objects
+  let player = null;
+  let aliens = [];
+  let bullets = [];
+
+  // Alien movement variables
+  let alienDirection = 1;  // 1 = move right, -1 = move left
+  const alienSpeed = 1;
+
+  // Shooting cooldown so we can't spam
+  let shootCooldown = 0;
+
+  // Initialize all game objects
+  function initGame() {
+    // Remove any existing game objects (if restarting)
+    while (svg.lastChild && svg.lastChild.nodeName !== 'defs') {
+      svg.removeChild(svg.lastChild);
+    }
+    aliens = [];
+    bullets = [];
+
+    // Create multiple rows of aliens
+    const rows = 3;
+    const cols = 6;
+    const startX = 80;
+    const startY = 50;
+    const spacingX = 40;
+    const spacingY = 40;
+
+    for(let r = 0; r < rows; r++){
+      for(let c = 0; c < cols; c++){
+        // Each alien is a <use xlink:href="#alien" />
+        const alienUse = document.createElementNS("http://www.w3.org/2000/svg", "use");
+        alienUse.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#alien");
+
+        // Give each alien a random bright color
+        const colors = ["#f00", "#0f0", "#ff0", "#0ff", "#f0f", "#fff"];
+        const randColor = colors[Math.floor(Math.random() * colors.length)];
+        alienUse.setAttribute("fill", randColor);
+
+        // Place on the SVG
+        svg.appendChild(alienUse);
+
+        // Store the alien in the array
+        aliens.push({
+          x: startX + c * spacingX,
+          y: startY + r * spacingY,
+          w: 8,    // Because the bug shape is 4 wide at base, scaled by 2 => 8
+          h: 6,    // 3 high base * 2 => 6
+          node: alienUse,
+          alive: true
+        });
+      }
+    }
+
+    // Create the player's ship
+    const shipUse = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    shipUse.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#ship");
+    svg.appendChild(shipUse);
+
+    // Position the ship near the bottom
+    player = {
+      x: width / 2 - 8,
+      y: height - 40,
+      w: 8,
+      h: 8,
+      node: shipUse
+    };
+
+    // Reset direction
+    alienDirection = 1;
+  }
+
+  // Update on every frame
+  function update() {
+    // Move the player left or right
+    const playerSpeed = 4;
+    if (leftPressed)  player.x -= playerSpeed;
+    if (rightPressed) player.x += playerSpeed;
+
+    // Enforce boundaries on player
+    if (player.x < 0) player.x = 0;
+    if (player.x > width - player.w) player.x = width - player.w;
+
+    // Move aliens
+    let edgeHit = false;
+    for (const alien of aliens) {
+      if (!alien.alive) continue;
+      alien.x += alienDirection * alienSpeed;
+      // If an alien hits the left or right boundary, we note it
+      if (alien.x < 0 || alien.x > width - alien.w) {
+        edgeHit = true;
+      }
+    }
+    // If we hit the boundary, move them all down and flip direction
+    if (edgeHit) {
+      for (const alien of aliens) {
+        if (!alien.alive) continue;
+        alien.y += 20;
+      }
+      alienDirection *= -1;
+    }
+
+    // Move bullets upward
+    for (const b of bullets) {
+      b.y -= 5;
+    }
+
+    // Collision detection: bullet vs. alien
+    for (const b of bullets) {
+      for (const alien of aliens) {
+        if (alien.alive) {
+          // Check bounding boxes
+          if (
+            b.x < alien.x + alien.w &&
+            b.x + 2 > alien.x &&
+            b.y < alien.y + alien.h &&
+            b.y + 6 > alien.y
+          ) {
+            // Collision
+            alien.alive = false;
+            alien.node.remove();   // Remove the alien from the SVG
+            b.node.remove();       // Remove the bullet from the SVG
+            b.dead = true;
+          }
+        }
+      }
+    }
+
+    // Clean up bullets that are off-screen or dead
+    bullets = bullets.filter(b => !b.dead && b.y > -10);
+
+    // Check if all aliens are destroyed
+    const aliveAliens = aliens.filter(a => a.alive);
+    if (aliveAliens.length === 0) {
+      // Game over: restart automatically
+      resetGame();
+      return;
+    }
+
+    // Check if aliens reached the bottom (meaning game over)
+    for (const alien of aliveAliens) {
+      if (alien.y + alien.h >= player.y) {
+        resetGame();
+        return;
+      }
+    }
+
+    // Handle shooting (space key)
+    shootCooldown--;
+    if (spacePressed && shootCooldown <= 0) {
+      shootCooldown = 15; // A bit of a delay between shots
+      const bulletUse = document.createElementNS("http://www.w3.org/2000/svg","use");
+      bulletUse.setAttributeNS("http://www.w3.org/1999/xlink","xlink:href","#bullet");
+      svg.appendChild(bulletUse);
+
+      // Position bullet near the center of the ship
+      const bulletX = player.x + player.w / 2 - 1;
+      const bulletY = player.y - 6;
+      bullets.push({x: bulletX, y: bulletY, w: 2, h: 6, node: bulletUse});
+    }
+
+    // Draw positions
+    draw();
+  }
+
+  // Render (set attributes on SVG elements) 
+  function draw() {
+    // Player
+    player.node.setAttribute("x", player.x);
+    player.node.setAttribute("y", player.y);
+
+    // Aliens
+    for (const alien of aliens) {
+      alien.node.setAttribute("x", alien.x);
+      alien.node.setAttribute("y", alien.y);
+    }
+
+    // Bullets
+    for (const b of bullets) {
+      b.node.setAttribute("x", b.x);
+      b.node.setAttribute("y", b.y);
+    }
+  }
+
+  // Reset the game state (called on "game over")
+  function resetGame() {
+    initGame();
+  }
+
+  // The main loop, repeatedly called
+  function gameLoop() {
+    update();
+    requestAnimationFrame(gameLoop);
+  }
+
+  // Keyboard listeners for movement and shooting
+  window.addEventListener("keydown", e => {
+    if (e.code === "ArrowLeft")  leftPressed = true;
+    if (e.code === "ArrowRight") rightPressed = true;
+    if (e.code === "Space")      spacePressed = true;
+  });
+  window.addEventListener("keyup", e => {
+    if (e.code === "ArrowLeft")  leftPressed = false;
+    if (e.code === "ArrowRight") rightPressed = false;
+    if (e.code === "Space")      spacePressed = false;
+  });
+
+  // Start everything up
+  initGame();
+  gameLoop();
+})();
+</script>
+</body>
+</html>

@@ -1,1 +1,9 @@
-requests>=2.28
+ipykernel
+openai
+python-dotenv
+pandas
+requests
+lxml
+PyPDF2
+PDFReader
+IPython
