@@ -34,7 +34,7 @@ In this course, you will learn how to:
 ### Using an IDE of Your Choice
 1. Clone the repository to your local machine using the command:
    ```
-   git clone <repository-url>
+   git clone https://github.com/LinkedInLearning/introducing-openai-o1-the-future-of-ai-reasoning-6008048.git
    ```
 2. Open the project folder in your preferred IDE.
 3. Follow the lab instructions provided in the course to complete the exercises.
