@@ -2,7 +2,7 @@
 This is the repository for the LinkedIn Learning course Introducing OpenAI o1: The Future of AI Reasoning. The full course is available from [LinkedIn Learning][lil-course-url].
 
 
-# Introducing OpenAI o1: The Future of AI Reasoning
+# How to use AI Reasoning Models: Practical Applications with Hands-on Exercises
 
 Welcome to the repository for the LinkedIn Learning course **Introducing OpenAI o1: The Future of AI Reasoning**. This repository contains the exercise files, Jupyter Notebooks, sample code, and assets used throughout the course.
 
