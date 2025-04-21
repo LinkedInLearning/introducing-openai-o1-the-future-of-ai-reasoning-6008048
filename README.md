@@ -2,7 +2,7 @@
 
 Welcome to the repository for the LinkedIn Learning course **How to use AI Reasoning Models: Practical Applications with Hands-on Exercises**. The full course is available from [LinkedIn Learning][lil-course-url].
 
-[lil-thumbnail-url]
+![lil-thumbnail-url]
 
 ## Course Description
 
@@ -60,6 +60,15 @@ This repository does not accept pull requests. If you encounter issues or have f
 ## Acknowledgements
 
 Special thanks to LinkedIn Learning, the course instructors, and all contributors for their support in developing this course.
+
+### Instructor
+
+Anurag Karuparti
+
+AI Leader at Microsoft | Author | Responsible AI Advisor
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/anurag-karuparti?u=104).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
