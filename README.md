@@ -2,6 +2,12 @@
 
 Welcome to the repository for the LinkedIn Learning course **How to use AI Reasoning Models: Practical Applications with Hands-on Exercises**. The full course is available from [LinkedIn Learning][lil-course-url].
 
+[lil-thumbnail-url]
+
+## Course Description
+
+This course explores OpenAI's reasoning model (o-Series) focusing on its advanced reasoning capabilities and practical applications in business and scientific contexts. Instructor Anurag Karuparti covers everything from fundamental concepts and technical implementations to ethical considerations and future development. Test out your new skills along the way with practical hands-on exercises in coding, risk analysis, and safety implementations. By the end of this course, you’ll be prepared to leverage o-Series unique features, including its inference scaling architecture and chain-of-thought reasoning capabilities.
+
 ## Course Overview
 
 In this course, you will learn how to:
@@ -55,4 +61,8 @@ This repository does not accept pull requests. If you encounter issues or have f
 
 Special thanks to LinkedIn Learning, the course instructors, and all contributors for their support in developing this course.
 
-[lil-course-url]: https://www.linkedin.com/learning/
+[0]: # (Replace these placeholder URLs with actual course URLs)
+
+
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQGd8JbUMQObVw/learning-public-crop_675_1200/B4EZYCm6a1HcAY-/0/1743800478076?e=2147483647&v=beta&t=YCfkQaAQyPGNkSBUcNm1QQa_F_kTkPHhEyKuqH27RF4
+[lil-course-url]: https://www.linkedin.com/learning/how-to-use-ai-reasoning-models-practical-applications-with-hands-on-exercises
